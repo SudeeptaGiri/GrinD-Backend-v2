@@ -17,9 +17,24 @@ async function generateToken(user) {
 
 
 module.exports = {
+   
+    Query: {
+
+        async getUser(_, {username}) {
+            const foundUser = await User.findOne({ username });
+
+            if(!foundUser) {
+                throw new UserInputError("User not found", {});
+            }
+
+            return foundUser;
+        }
+    },
+
     Mutation: {
 
         async login(_, {username, password}) {
+            console.log("This mutation was called");
             const {errors, valid} = validateLoginInput(username, password);
            
             if(!valid) {
@@ -83,7 +98,10 @@ module.exports = {
                 email,
                 username,
                 password,
-                createdAt: new Date().toISOString()
+                createdAt: new Date().toISOString(),
+                iconUrl:"",
+                description:"Hey! I am new to GrinD!"
+
             });
 
             const res = await newUser.save();

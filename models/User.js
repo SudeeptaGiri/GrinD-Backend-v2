@@ -4,7 +4,10 @@ const userSchema = new Schema({
     username: String,
     password: String,
     email: String,
-    createdAt: String
+    createdAt: String,
+    profileIcon: String,
+    iconUrl: String,
+    description: String
 });
 
 module.exports = model('User', userSchema);
