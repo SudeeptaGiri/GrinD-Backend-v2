@@ -11,6 +11,8 @@ const typeDefs = require('./graphql/typeDefs');
 
 const pubsub = new PubSub();
 
+const PORT = process.env.PORT || 5000;
+
 // We need type definitions for GQL, hence we are declaring it below
 
 const server = new ApolloServer({
@@ -22,7 +24,7 @@ const server = new ApolloServer({
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log(`Successfully connected to the database`)
-        return server.listen({port: 5000});
+        return server.listen({PORT});
     })
     .then((res) => {
         console.log(`Server running at ${res.url}`);
