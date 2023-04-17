@@ -1,3 +1,5 @@
+Link to Front-end Repository: https://github.com/KrAparesh/GrinD-Frontend
+
 # GrinD | Backend Guide
 
 The project is a social media platform specifically for sports players and athletes. The platform enables users to like, comment, and upload files and videos. One of the standout features of the platform is the guidance and roadmap we offer to players for various sports.
