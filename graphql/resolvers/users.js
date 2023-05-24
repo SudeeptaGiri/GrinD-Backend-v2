@@ -100,7 +100,17 @@ module.exports = {
                 password,
                 createdAt: new Date().toISOString(),
                 iconUrl:"",
-                description:"Hey! I am new to GrinD!"
+                description:"Hey! I am new to GrinD!",
+                sport_selection: false,
+                selected_sport: null,
+                selected_category: null,
+                started: false,
+                aiScore: null,
+                progress: null,
+                taskList: [{
+                    taskName: null,
+                    isChecked: false
+                }]
 
             });
 

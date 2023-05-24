@@ -7,7 +7,21 @@ const userSchema = new Schema({
     createdAt: String,
     profileIcon: String,
     iconUrl: String,
-    description: String
+    description: String,
+    sport_selection: Boolean,
+    selected_sport: String,
+    selected_category: String,
+    started: Boolean,
+    aiScore: String,
+    progress: String,
+    taskList: [
+        {
+            taskName: String,
+            isChecked: Boolean
+        }
+    ]
+
+
 });
 
 module.exports = model('User', userSchema);

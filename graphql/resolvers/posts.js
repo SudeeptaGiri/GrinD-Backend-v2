@@ -29,7 +29,8 @@ module.exports = {
     },
 
     Mutation: {
-        async createPost(_, { body }, context) {
+        //async createPost(_, { body }, context) {
+        async createPost(_, { body, title, eventAt }, context) {
             const user = checkAuth(context);
 
             if(body.trim() === '') {
@@ -37,9 +38,14 @@ module.exports = {
             }
 
             const newPost = new Post({
+                title,
                 body,
+                eventAt,
+                description: "null",
+                iconUrl: "null",
                 user: user.id, 
                 username: user.username,
+                email: user.email,
                 createdAt: new Date().toISOString()
             });
 
