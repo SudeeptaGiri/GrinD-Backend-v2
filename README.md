@@ -1,4 +1,4 @@
-Link to Front-end Repository: https://github.com/KrAparesh/GrinD-Frontend
+Link to Front-end Repository: [https://github.com/KrAparesh/GrinD-Frontend](https://github.com/KrAparesh/GrinD-Frontend)
 
 # GrinD | Backend Guide
 
